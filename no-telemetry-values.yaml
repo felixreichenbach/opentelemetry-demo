@@ -1,0 +1,22 @@
+# Disable bundled observability backends
+grafana:
+  enabled: false
+
+prometheus:
+  enabled: false
+
+jaeger:
+  enabled: false
+
+opensearch:
+  enabled: false
+
+# Disable default bundled Collector
+opentelemetry-collector:
+  enabled: false
+
+# Override environment variables globally across all components
+default:
+  envOverrides:
+    - name: OTEL_SDK_DISABLED
+      value: "true"
