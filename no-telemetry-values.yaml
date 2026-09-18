@@ -20,3 +20,11 @@ default:
   envOverrides:
     - name: OTEL_SDK_DISABLED
       value: "true"
+
+# Use a locally built image for the email component
+components:
+  email:
+    imageOverride:
+      repository: email
+      tag: local
+      pullPolicy: Never
